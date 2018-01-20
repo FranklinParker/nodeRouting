@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <form #loginForm="ngForm" (submit)="login(loginForm.value)">
+    <form #loginForm="ngForm" (submit)="login(loginForm.value)" class=" form-signin">
       <div class="form-group">
         <mat-form-field class="example-full-width">
           <input matInput name="username"
@@ -24,7 +24,7 @@
           </mat-error>
         </mat-form-field>
       </div>
-      <button mat-raised-button color="primary">Login</button>
+      <button mat-raised-button color="primary" class="btn btn-block">Login</button>
     </form>
 
   </div>

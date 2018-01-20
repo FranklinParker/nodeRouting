@@ -1,0 +1,12 @@
+.form-signin {
+  max-width: 550px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 770px;
+  padding: 30px;
+  margin: 0 auto;
+  background: linen;
+}
