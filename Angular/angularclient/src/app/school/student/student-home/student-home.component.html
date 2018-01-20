@@ -1,0 +1,10 @@
+<div class="container pull-left d-block">
+  <div class="row">
+    <div class="col-6 align-left">
+      <app-students-list [students]="students" (studentSelected)="studentUpdated($event)"></app-students-list>
+    </div>
+    <div class="col-6">
+      <app-student-view [student]="student"></app-student-view>
+    </div>
+  </div>
+</div>

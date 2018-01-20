@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light text-danger mb-3 fixed-top" >
+  <div class="container ml-2">
+    <a class="navbar-brand" routerLink="/students">
+      <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+    </a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/students">Students</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/courses">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+
+      <li ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle
+           class="nav-link dropdown-toggle show" id="dropdown01" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">Links</a>
+        <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="dropdown01">
+          <a class="dropdown-item" routerLink="/courses">Courses</a>
+          <a class="dropdown-item" routerLink="/students">Students</a>
+        </div>
+    </ul>
+  </div>
+</nav>

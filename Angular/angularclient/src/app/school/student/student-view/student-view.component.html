@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    <h4 *ngIf="student; else noStudentName">
+      Editing {{ student.firstName + ' ' + student.lastName}}</h4>
+    <ng-template #noStudentName><h4>Select Student</h4></ng-template>
+  </div>
+  <div class="card-body">
+    <form *ngIf="student" (submit)="save()">
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput name="firstName"
+                 [(ngModel)]="student.firstName"
+                 #firstName="ngModel"
+                 required placeholder="Student First Name" type="text">
+          <mat-error *ngIf="firstName.invalid && firstName.touched">
+            First Name required
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput name="lastName"
+                 [(ngModel)]="student.lastName"
+                 #lastName="ngModel"
+                 required placeholder="Student Last Name" type="text">
+          <mat-error *ngIf="lastName.invalid && lastName.touched">
+            Last Name required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary">Save</button>
+    </form>
+
+  </div>
+
+</div>
+
