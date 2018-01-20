@@ -42,6 +42,20 @@
 
 
             </form>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Course</th>
+                        <th>Professor</th>
+                        <th>Schedule</th>
+                    </tr>
+                    <tr ng-repeat="course in courses">
+                        <td>{{course.courseName}}</td>
+                        <td>{{course.professor}}</td>
+                        <td>{{course.classSchedule}}</td>
+                    </tr>
+                </table>
+            </div>
 
         </div>
 
@@ -61,18 +75,6 @@
                 password: $scope.password
 
               };
-              var req = {
-                method: 'POST',
-                url: '/users/login',
-                headers: {
-                  'Content-Type': undefined
-                },
-                body: JSON.stringify({
-                  userName: $scope.userName,
-                  password: $scope.password
-
-                })
-              };
               $http.post('/users/login', data)
                 .then(function (result) {
                     $scope.loginStatus = 'Welcome ' + result.data.name;
@@ -84,11 +86,7 @@
                     $scope.loggedIn = false;
 
                   });
-              // $http(req).then(function(data){
-              //   alert('got response:',data);
-              // }, function(err){
-              //   alert('got error', err);
-              // });
+
 
             } // end of function login
 
@@ -100,16 +98,12 @@
               $http.get('/api/courses', config)
                 .then(function (result) {
                     alert('got courses:' + JSON.stringify(result.data));
+                    $scope.courses = result.data;
                   },
                   function (err) {
                     alert('err:' + JSON.stringify(err.data));
 
                   });
-              // $http(req).then(function(data){
-              //   alert('got response:',data);
-              // }, function(err){
-              //   alert('got error', err);
-              // });
 
             } // end of get token
           });
