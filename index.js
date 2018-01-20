@@ -5,11 +5,11 @@ var cors = require('cors');
 var jwt = require("jsonwebtoken");
 
 
-function mountAPI(app,config, model) {
+function mountAPI(app, config, model) {
   console.log(model);
 
   function returnError(req, res, message) {
-    return function(err) {
+    return function (err) {
       if (err) {
         model.logger.logAction("api", "error", req.user ? req.user.uid : "Not authenticated", {
           method: req.method,
@@ -32,12 +32,12 @@ function mountAPI(app,config, model) {
   }
 
   function renderExcel(req, res) {
-    return function(modelInstance) {
+    return function (modelInstance) {
       if (modelInstance.augmentedData.exportData && modelInstance.augmentedData.exportData.template) {
         res.setHeader('Content-Type', 'application/vnd.openxmlformats');
         res.setHeader("Content-Disposition", "attachment; filename=" + (modelInstance.augmentedData.exportData.fileName || "export.xlsx"));
         return exporter.generate(modelInstance.augmentedData.exportData)
-          .then(function(result) {
+          .then(function (result) {
             return res.send(new Buffer(result, 'binary'));
           });
       } else {
@@ -47,24 +47,24 @@ function mountAPI(app,config, model) {
   }
 
   function renderJson(res, query, getter) {
-    return function(modelInstance) {
+    return function (modelInstance) {
       return res.json(getter ? getter(modelInstance, query) : modelInstance);
     };
   }
 
   function apiHandler(api, message, getter) {
     var start = new Date();
-    return function(req, res) {
+    return function (req, res) {
       api({
-          actionData: req.body || {},
-          query: extend(extend({
-              $method: req.method
-            }, req.query || {}),
-            req.params || {}),
-          user: req.user,
-          estimationModel: {}
-        })
-        .then(function(modelInstance) {
+        actionData: req.body || {},
+        query: extend(extend({
+            $method: req.method
+          }, req.query || {}),
+          req.params || {}),
+        user: req.user,
+        estimationModel: {}
+      })
+        .then(function (modelInstance) {
             var excelMime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
             model.logger.logAction("api", "DEBUG", req.user ? req.user.uid : "Not authenticated", {
               method: req.method,
@@ -86,8 +86,7 @@ function mountAPI(app,config, model) {
   router = express();
 
 
-  var corsDelegate = function(req, callback) {
-    console.log('corsDelegate: '+req.url);
+  var corsDelegate = function (req, callback) {
     switch (req.url) {
       case '/getToken':
         callback(null, {
@@ -137,7 +136,7 @@ function mountAPI(app,config, model) {
   };
 
   router.options('*', cors({
-    origin: function(origin, callback) {
+    origin: function (origin, callback) {
       console.log('origin', orgin);
       callback(null, true);
       // model.users.getApiClients().then(function(clientApps) {
@@ -150,11 +149,11 @@ function mountAPI(app,config, model) {
       // })
     },
     allowHeaders: ['Content-Type', 'Authorization']
-  }), function(req, res) {
+  }), function (req, res) {
     res.sendStatus(200);
   });
 
-  router.use(cors(corsDelegate), function(req, res, next) {
+  router.use(cors(corsDelegate), function (req, res, next) {
     console.log('router Use cors - req.header(Orgin):', req.header('Origin'));
     if (req.header('Origin')) {
       res.setHeader('Surrogate-Control', 'no-store');
@@ -167,13 +166,13 @@ function mountAPI(app,config, model) {
 
 
   var tokenCheck =
-    function(req, res, next) {
+    function (req, res, next) {
       // check header or url parameters or post parameters for token
       var token = req.headers.authorization; // req.body.token ||
       // req.query.token ||
       console.log('token:', token);
       if (token) {
-        jwt.verify(token, config.passport.secret, function(err, decoded) {
+        jwt.verify(token, config.passport.secret, function (err, decoded) {
           if (err) {
             return res.status(403).send({
               success: false,
@@ -206,7 +205,7 @@ function mountAPI(app,config, model) {
   tokenCheck.unless = unless;
 
 
-  router.use(tokenCheck.unless({path: "/getToken", useOriginalUrl:false}));
+  router.use(tokenCheck.unless({path: "/getToken", useOriginalUrl: false}));
 
   router.get("/courses", apiHandler(model.courses.getCourses, 'get courses failed'));
   router.post("/courses", apiHandler(model.courses.addCourse, 'add course failed'));
