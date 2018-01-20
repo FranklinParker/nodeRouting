@@ -35,8 +35,8 @@
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()">Sign in</button>
-                <button ng-show="loggedIn" class="btn btn-lg btn-primary btn-block" type="button" ng-click="getToken()">
-                    Get Token
+                <button ng-show="loggedIn" class="btn btn-lg btn-primary btn-block" type="button" ng-click="getCourses()">
+                    Get courses
                 </button>
 
 
@@ -52,6 +52,7 @@
                 $scope.userName = "fparker";
                 $scope.password = "ibm";
                 $scope.loggedIn = false;
+                $scope.token = null;
 
                 $scope.login = function () {
                     var data = {
@@ -74,6 +75,7 @@
                     $http.post('/users/login', data)
                         .then(function (result) {
                                 $scope.loginStatus = 'Welcome ' + result.data.name;
+                                $scope.token = result.data.token;
                                 $scope.loggedIn = true;
                             },
                             function (err) {
@@ -89,11 +91,14 @@
 
                 } // end of function login
 
-                $scope.getToken = function () {
+                $scope.getCourses = function () {
+                    var config = {
+                        headers: {  'authorization': $scope.token}
 
-                    $http.get('/getToken')
+                    };
+                    $http.get('/api/courses', config)
                         .then(function (result) {
-                              alert('got token:' + JSON.stringify( result.data));
+                              alert('got courses:' + JSON.stringify( result.data));
                             },
                             function (err) {
                                 alert('err:'  + JSON.stringify( err.data));

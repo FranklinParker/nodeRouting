@@ -18,7 +18,6 @@ module.exports = function(app, passport,config) {
 
 
   router.post('/login', function(req, res, next) {
-    console.log('login body', req.body);
     passport.authenticate('local', function(err, user, info) {
       if (err) {
         return res.status(401).send({
@@ -38,13 +37,12 @@ module.exports = function(app, passport,config) {
         if (loginErr) {
           return next(loginErr);
         }
-        console.log('req.user', req.user);
         return res.status(200).send({
           result:'success',
           name: user.name,
           message: 'authentication succeeded',
           token: jwt.sign({
-            uid: user.userName
+            uid: user.user
           }, config.passport.secret, {
             expiresIn: 24 * 60 * 60
           })
