@@ -2,76 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec26469-51c4-4b32-8315-720bd1ce9692" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/.angular-cli.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/e2e/app.e2e-spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/e2e/app.po.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/e2e/tsconfig.e2e.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/karma.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/protractor.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/angular-material/angular-material.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/app.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/app.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/app.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/app.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/app.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/app.routing.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/components/courses/courses.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/components/courses/courses.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/components/courses/courses.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/components/courses/courses.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/school.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-home/student-home.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-home/student-home.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-home/student-home.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-home/student-home.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-view/student-view.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-view/student-view.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-view/student-view.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/student-view/student-view.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/students-list/students-list.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/students-list/students-list.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/school/student/students-list/students-list.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/components/nav-bar/nav-bar.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/components/nav-bar/nav-bar.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/components/nav-bar/nav-bar.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/components/nav-bar/nav-bar.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/highlight.directive.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/models/Employee.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/models/course.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/models/loggedin.user.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/models/student.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/pipe/capitialize.pipe.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/pipe/capitialize.pipe.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/pipe/date-formatter.pipe.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/pipe/date-formatter.pipe.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/pipe/employee-name.pipe.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/pipe/employee-name.pipe.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/services/school.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/services/user.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/shared/shared.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/user/login/login.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/user/login/login.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/user/login/login.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/app/user/user.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/assets/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/environments/environment.prod.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/environments/environment.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/main.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/polyfills.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/test.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/tsconfig.app.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/tsconfig.spec.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/src/typings.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/tsconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Angular/angularclient/tslint.json" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,10 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1440">
+              <caret line="96" column="50" lean-forward="false" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
+            <state relative-caret-position="402">
               <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
               <folding />
             </state>
@@ -98,38 +41,8 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courseCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/courseCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mountExample.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mountExample.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.po.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Angular/angularclient/e2e/app.po.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="833">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -175,11 +88,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="www" pinned="false" current-in-tab="true">
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
+            <state relative-caret-position="-749">
               <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/signin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -195,6 +128,8 @@
       <list>
         <option value="$PROJECT_DIR$/Angular/angularclient/package.json" />
         <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -270,6 +205,22 @@
               <item name="NodeRouter" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NodeRouter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NodeRouter" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NodeRouter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NodeRouter" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NodeRouter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NodeRouter" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -338,12 +289,12 @@
       <updated>1516423176690</updated>
       <workItem from="1516423178050" duration="1729000" />
       <workItem from="1516425036209" duration="330000" />
-      <workItem from="1516425440793" duration="390000" />
+      <workItem from="1516425440793" duration="2042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2449000" />
+    <option name="totallyTimeSpent" value="4101000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -356,6 +307,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="26" y="57" width="1400" height="781" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24945612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -365,7 +317,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -481,22 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="50" lean-forward="false" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/courseCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -537,14 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/9.3.0/core-modules/bootstrap_node.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -561,10 +489,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="50" lean-forward="false" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="-749">
           <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/signin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
           <folding />
         </state>
       </provider>

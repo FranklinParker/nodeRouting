@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<link href="/stylesheets/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="/stylesheets/signin.css" rel="stylesheet">
 
-<body>
-  <div ng-app="myApp" ng-controller="myCtrl" class="container">
-
-    <form class="form-signin">
-      <h2 class="form-signin-heading">Please sign in</h2>
-      <label for="userName" class="sr-only">User Name</label>
-      <input type="email" id="userName" ng-model="userName" class="form-control" placeholder="User Name" required autofocus>
-      <label for="password" class="sr-only">Password</label>
-      <input type="text" id="password" ng-model="password" class="form-control" placeholder="Password" required>
-      <div class="checkbox">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()">Sign in</button>
-    </form>
-
-  </div>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl" class="container">
+            <div class="card form-signin">
+                <div class="card-body"><p>{{loginStatus}}</p></div>
+            </div>
 
 
+            <form class="form-signin">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <label for="userName" class="sr-only">User Name</label>
+                <input type="email" id="userName" ng-model="userName" class="form-control" placeholder="User Name"
+                       required autofocus>
+                <label for="password" class="sr-only">Password</label>
+                <input type="text" id="password" ng-model="password" class="form-control" placeholder="Password"
+                       required>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()">Sign in</button>
 
-  <script>
-    var app = angular.module('myApp', []);
-    app.controller('myCtrl', function($scope, $http) {
+            </form>
 
-      $scope.userName = "fparker";
-      $scope.password = "ibm";
+        </div>
 
-      $scope.login = function() {
-        var data = {
-          username: $scope.userName,
-          password: $scope.password
 
-        };
-        var req = {
-          method: 'POST',
-          url: '/users/login',
-          headers: {
-            'Content-Type': undefined
-          },
-          body: JSON.stringify({
-            userName: $scope.userName,
-            password: $scope.password
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope, $http) {
+                $scope.loginStatus = 'Not logged in';
+                $scope.userName = "fparker";
+                $scope.password = "ibm";
 
-          })
-        };
-        $http.post('/users/login', data)
-          .then(function(result) {
-              alert('response :'  + JSON.stringify(result.data));
-            },
-            function(err) {
+                $scope.login = function () {
+                    var data = {
+                        username: $scope.userName,
+                        password: $scope.password
 
+                    };
+                    var req = {
+                        method: 'POST',
+                        url: '/users/login',
+                        headers: {
+                            'Content-Type': undefined
+                        },
+                        body: JSON.stringify({
+                            userName: $scope.userName,
+                            password: $scope.password
+
+                        })
+                    };
+                    $http.post('/users/login', data)
+                        .then(function (result) {
+                                alert('response :' + JSON.stringify(result.data));
+                                $scope.loginStatus = 'Welcome ' + result.data.name;
+                            },
+                            function (err) {
+                                alert('error :' + JSON.stringify(err.data));
+                                $scope.loginStatus = 'Not Logged in';
+
+                            });
+                    // $http(req).then(function(data){
+                    //   alert('got response:',data);
+                    // }, function(err){
+                    //   alert('got error', err);
+                    // });
+
+                } // end of function login
             });
-        // $http(req).then(function(data){
-        //   alert('got response:',data);
-        // }, function(err){
-        //   alert('got error', err);
-        // });
-
-      } // end of function login
-    });
-  </script>
-</body>
+        </script>
+    </body>
 
 </html>

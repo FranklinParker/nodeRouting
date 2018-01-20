@@ -21,14 +21,14 @@ module.exports = function(app, passport,config) {
     console.log('login body', req.body);
     passport.authenticate('local', function(err, user, info) {
       if (err) {
-        return res.send({
+        return res.status(401).send({
           result:'failed',
           message: 'authentication failed'
         }); // will generate a 500 error
       }
       // Generate a JSON response reflecting authentication status
       if (!user) {
-        return res.send({
+        return res.status(401).send({
           result:'failed',
           message: 'authentication failed'
         });
@@ -66,7 +66,7 @@ module.exports = function(app, passport,config) {
         });
       }
       if (password === user.password) {
-        return done(null, {user: user.userName});
+        return done(null, {user:user.userName, name:user.name});
       } else {
         return done('error logging in');
       }
