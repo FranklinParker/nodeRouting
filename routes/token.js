@@ -6,12 +6,13 @@ module.exports = function(config) {
 
 
   // JWT example - issue token
-  router.get("/api/getToken", function(req, res) {
+  router.get("/getToken", function(req, res) {
+    console.log('getToken req.user:' + JSON.stringify(req.user,null,2));
     const queryUserId = req.query ? req.query.userId : null;
     const userId = req.user || queryUserId;
     if (userId) {
       // Generate JWT - set expire to 1 day
-      res.json({
+      res.status(200).json({
         success: true,
         token: jwt.sign({
           uid: userId
@@ -21,7 +22,7 @@ module.exports = function(config) {
       });
 
     } else {
-      res.json({
+      res.status(401).json({
         token: null
       });
     }

@@ -35,6 +35,10 @@
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()">Sign in</button>
+                <button ng-show="loggedIn" class="btn btn-lg btn-primary btn-block" type="button" ng-click="getToken()">
+                    Get Token
+                </button>
+
 
             </form>
 
@@ -47,6 +51,7 @@
                 $scope.loginStatus = 'Not logged in';
                 $scope.userName = "fparker";
                 $scope.password = "ibm";
+                $scope.loggedIn = false;
 
                 $scope.login = function () {
                     var data = {
@@ -68,12 +73,12 @@
                     };
                     $http.post('/users/login', data)
                         .then(function (result) {
-                                alert('response :' + JSON.stringify(result.data));
                                 $scope.loginStatus = 'Welcome ' + result.data.name;
+                                $scope.loggedIn = true;
                             },
                             function (err) {
-                                alert('error :' + JSON.stringify(err.data));
-                                $scope.loginStatus = 'Not Logged in';
+                                $scope.loginStatus = 'Logged in failed';
+                                $scope.loggedIn = false;
 
                             });
                     // $http(req).then(function(data){
@@ -83,6 +88,24 @@
                     // });
 
                 } // end of function login
+
+                $scope.getToken = function () {
+
+                    $http.get('/getToken')
+                        .then(function (result) {
+                              alert('got token:' + JSON.stringify( result.data));
+                            },
+                            function (err) {
+                                alert('err:'  + JSON.stringify( err.data));
+
+                            });
+                    // $http(req).then(function(data){
+                    //   alert('got response:',data);
+                    // }, function(err){
+                    //   alert('got error', err);
+                    // });
+
+                } // end of get token
             });
         </script>
     </body>
