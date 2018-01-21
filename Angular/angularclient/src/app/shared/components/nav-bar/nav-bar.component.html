@@ -17,7 +17,7 @@
       <li ngbDropdown class="nav-item dropdown">
         <a ngbDropdownToggle
            class="nav-link dropdown-toggle show" id="dropdown01" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">Links</a>
+           aria-haspopup="true" aria-expanded="false">{{userService.user?userService.user.name:'Links'}}</a>
         <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="dropdown01">
           <a class="dropdown-item" routerLink="/courses">Courses</a>
           <a class="dropdown-item" routerLink="/students">Students</a>

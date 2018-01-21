@@ -30,5 +30,9 @@ export class UserService {
 
   }
 
+  getTokin(): string{
+    return this.user? this.user.token:'';
+  }
+
 
 }
