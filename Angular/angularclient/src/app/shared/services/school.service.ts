@@ -12,6 +12,8 @@ import {UserService} from "./user.service";
 export class SchoolService {
   apiUrl = environment.apiUrl;
 
+
+
   constructor(private http: HttpClient, private userService: UserService) {
     console.log('ApiUrl:' + environment.apiUrl);
   }
@@ -52,15 +54,10 @@ export class SchoolService {
   getCourses(): Observable<Course[]> {
     const token = this.userService.getTokin();
     console.log('token:' + token);
-    //const headers = new HttpHeaders() .set('authorization', token);
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'authorization':token
-      })
-    };
-
-    // headers = headers.append('authorization', this.userService.getTokin());
-    return this.http.get(this.apiUrl + 'courses') //, httpOptions)
+    return this.http.get(this.apiUrl + 'courses') //,
+       // {
+       //   headers: new HttpHeaders().set('authorization',token),
+       // }) // , {headers:headers})
       .map((courses: Course []) => {
         const courseList: Course[] = [];
         courses.forEach((course: Course) => courseList.push(new Course(course.courseName, course.professor, course.classSchedule)));
