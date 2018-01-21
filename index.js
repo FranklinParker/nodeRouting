@@ -205,7 +205,7 @@ function mountAPI(app, config, model) {
   tokenCheck.unless = unless;
 
 
-  router.use(tokenCheck.unless({path: "/getToken", useOriginalUrl: false}));
+ // router.use(tokenCheck.unless({path: "/getToken", useOriginalUrl: false}));
 
   router.get("/courses", apiHandler(model.courses.getCourses, 'get courses failed'));
   router.post("/courses", apiHandler(model.courses.addCourse, 'add course failed'));
